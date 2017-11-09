@@ -19,7 +19,7 @@ I've notice `Printf` it's kindly remind me of C Programming (which I've abandon 
 
 And yes.It is likely as C.
 
-```
+```go
 package main
 
 import (
@@ -35,7 +35,7 @@ func main() {
 ## Function
 Golang function declaration is simple and it's like strong-type language, we have to define type for each parameter (also return type too).
 
-```
+```go
 package main
 
 import "fmt"
@@ -51,7 +51,7 @@ func main() {
 
 And Golang has convenient feature like declare type once for all previous parameters
 
-```
+```go
 func add(x, y int) int {
   return x + y
 }
@@ -59,7 +59,7 @@ func add(x, y int) int {
 
 Return value can be multiple value
 
-```
+```go
 func swap(a, b string) (string, string) {
 	return b, a
 }
@@ -73,7 +73,7 @@ func main() {
 
 And you can also define variable that want to return into the return type of function directly! Like this
 
-```
+```go
 func split(sum int) (x, y int) { // define return data
 	x = sum * 4 / 9
 	y = sum - x
@@ -89,7 +89,7 @@ func main() {
 
 One does simply. Variable can define at package level or function level. And also need to declare data type too.
 
-```
+```go
 package main
 
 import "fmt"
@@ -106,7 +106,7 @@ And you can assign initial value to them to.
 
 **OR** you can declare variable with initial value without using `var` keyword by using `:=`
 
-```
+```go
 func main() {
 	var i, j int = 1, 2
 	k := 3
@@ -118,7 +118,7 @@ func main() {
 
 Type will be consider as it is.
 
-```
+```go
 i := 42           // int
 f := 3.142        // float64
 g := 0.867 + 0.5i // complex128
@@ -126,7 +126,7 @@ g := 0.867 + 0.5i // complex128
 
 ## What type do we have?
 
-```
+```go
 bool
 
 string
@@ -154,7 +154,7 @@ Golang has "Zero values" concept that any varaibles declared without initial val
 
 You can convert type by `T(v)` T is type, v is value
 
-```
+```go
 var i int = 42
 var f float64 = float64(i)
 var u uint = uint(f)
@@ -162,7 +162,7 @@ var u uint = uint(f)
 
 And one does simply
 
-```
+```go
 i := 42
 f := float64(i)
 u := uint(f)
@@ -172,7 +172,7 @@ u := uint(f)
 
 Likely in JavaScript though. using `const`
 
-```
+```go
 const Pi = 3.14
 ```
 
@@ -180,7 +180,7 @@ const Pi = 3.14
 
 C like version
 
-```
+```go
 package main
 
 import "fmt"
@@ -196,7 +196,7 @@ func main() {
 
 And you can omit "initial" and "post" loop statement and become somekind of `while` loop in other langauge
 
-```
+```go
 func main() {
 	sum := 1
 	for sum < 1000 {
@@ -209,7 +209,7 @@ func main() {
 
 And you can easily made *infinite loop*
 
-```
+```go
 func main() {
 	for {
 	}
@@ -220,7 +220,7 @@ func main() {
 
 `if` is same as `for` you don't need parentheses `( )` to surround the condition but the body is require braces `{ }`
 
-```
+```go
 package main
 
 import (
@@ -242,7 +242,7 @@ func main() {
 
 And you can also using short statement `:=` to declare variable then using it in condition
 
-```
+```go
 func pow(x, n, lim float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
@@ -256,7 +256,7 @@ func pow(x, n, lim float64) float64 {
 
 Same as another language
 
-```
+```go
 package main
 
 import (
@@ -286,7 +286,7 @@ func main() {
 
 Similar to most of language (C/C++/JavaScript)
 
-```
+```go
 package main
 
 import (
@@ -318,7 +318,7 @@ And this is new for me. Defer is like **"HOLD ON. LET'S GET YOUR JOB DONE THEN C
 
 `defer` will execute after that function has return value or finish execution (Even it doesn't execute but it will be evaluated)
 
-```
+```go
 package main
 
 import "fmt"
@@ -334,7 +334,7 @@ What about multiple defer? Think that each time `defer` has been evaluated it wi
 
 **FYI:** Stack is "last-in-first-out order".
 
-```
+```go
 package main
 
 import "fmt"
