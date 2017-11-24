@@ -1,6 +1,6 @@
 # GoGoCrunch
 
-Go lang playground Don't have anything relate to KoKoKrunch
+Golang playground (The name of this repo doesn't have anything relate to KoKoKrunch snack)
 
 ![Image of Yaktocat](https://sg-live-01.slatic.net/p/16/nestle-koko-krunch-cereal-w-whole-grain-330g-1497938652-71730413-5fb21bd9a6c16e076646676e270bfa98.jpg)
 
